@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">ZW.</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav> 
+
+    <nav id="hamburger-nav">
+      <div class="logo">ZW.</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact">
+      <div class="contactme">
+          <p id="contactmetitle">Contact Me. </p>
+            <p id="contactmesentence">Feel free to reach out to me anytime.<br>
+            I'm just a message away!</p>
+        </div>
+
+      <div class="form">
+        <form action="">
+          <label for="name">Your Name</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="email">Your Email</label><br>
+          <input type="text" id="email" name="email"><br>
+          <label for="message">Your Message</label><br>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea><br>
+          <input type="submit" value="Send Message">
+        </form>
+
+      </div>
+
+    </div>
+        
+
+  <footer>
+    <div class="footer-container">
+        <p class="footername">&#169; 2023 Zimeng Wang</p>
+        <div class="footerlogo">
+          <a href="https://www.linkedin.com/in/zimeng-wang-237988160/">
+            <img class="linkedin-icon" alt="linkedin" src="icons/linkedin.svg" />
+          </a>
+          <a href=" https://github.com/zimw7?tab=repositories">
+            <img class="github-icon" alt="Github" src="icons/github.svg" />
+          </a>
+        </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+
+  </body>
+</html>

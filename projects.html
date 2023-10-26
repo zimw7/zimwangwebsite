@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">ZW.</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav> 
+
+    <nav id="hamburger-nav">
+      <div class="logo">ZW.</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <div class="projects">
+
+      <div class="slidebutton prev">
+        <img src="icons/navigate_before_FILL1_wght300_GRAD0_opsz24 2.svg" alt="previous">
+    </div>
+    
+    <div class="carousel">
+
+        <!-- Project 1 -->
+        <div class="carousel-item">
+            <div class="projectdetail">
+                <p class="project-title">Login System</p>
+                <p class="project-toolname">Java, Swing</p>
+                <p class="project-description">This project is a simple login system example...</p>
+                <p class="project-date">Date Complicated | Aug 2023</p>
+            </div>
+            <div class="projectimage">
+                <img src="images/Picture1.png" alt="Project 1">
+            </div>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="carousel-item">
+            <div class="projectdetail">
+                <p class="project-title">Java Calculator</p>
+                <p class="project-toolname">Java, Swing</p>
+                <p class="project-description">This project is a simple calculator application implemented in Java using Swing for the graphical user interface. It provides basic arithmetic operations (addition, subtraction, multiplication, and division) along with decimal point and a change sign feature. Users can input numbers and perform calculations with a user-friendly graphical interface.</p>
+                <p class="project-date">Date Complicated | Sep 2023</p>
+            </div>
+            <div class="projectimage">
+                <img src="images/Picture2.png" alt="Project 2">
+            </div>
+          </div>
+
+      <!-- project 3 -->
+      <div class="carousel-item">
+        <div class="projectdetail">
+          <p class="project-title">Movie Information Web App</p>
+          <p class="project-toolname">HTML, CSS, JavaScript</p>
+          <p class="project-description">This project is a web application for searching and displaying movie information. Users can search for movies by title, and the app fetches data from The Movie Database API to provide movie details, including titles, ratings, and overviews. The user-friendly interface allows for easy exploration of movie information.</p>
+          <p class="project-date">Date Complicated | Oct 2023</p>
+        </div>
+        <div class="projectimage">
+          <img src="images/Picture3.png" alt="Project 3">
+        </div>
+     </div>
+
+    <!-- project 4 -->
+    <div class="carousel-item">
+      <div class="projectdetail">
+        <p class="project-title">Student Database Application</p>
+        <p class="project-toolname">Java</p>
+        <p class="project-description">The Student Database Application is a Java program that allows users to manage and maintain student information. It enables the enrollment of students, tracks their tuition balances, and displays their information. Users can enter details like student names, grade levels, and courses they wish to enroll in. The program calculates the tuition balance based on the enrolled courses and allows students to make tuition payments. The application is designed for educational institutions to efficiently manage student data.</p>
+        <p class="project-date">Date Complicated | July 2023</p>
+      </div>
+      <div class="projectimage">
+        <img src="images/Picture4.png" alt="Project 4">
+      </div>
+    </div>
+
+    
+    <div class="slidebutton next">
+        <img src="icons/navigate_next_FILL1_wght300_GRAD0_opsz24 1.svg" alt="next">
+    </div>
+    
+    </div>
+      
+    </div>
+
+    <footer>
+      <div class="footer-container">
+          <p class="footername">&#169; 2023 Zimeng Wang</p>
+          <div class="footerlogo">
+            <a href="https://www.linkedin.com/in/zimeng-wang-237988160/">
+              <img class="linkedin-icon" alt="linkedin" src="icons/linkedin.svg" />
+            </a>
+            <a href=" https://github.com/zimw7?tab=repositories">
+              <img class="github-icon" alt="Github" src="icons/github.svg" />
+            </a>
+          </div>
+      </div>
+    </footer>
+
+
+  <script src="script.js"></script>
+
+
+  </body>
+</html>

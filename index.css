@@ -1,0 +1,404 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  color: #606060;
+  line-height: 26px;
+  font-size: 14px;
+}
+ul {
+  font-size: 14px;
+  color: #606060;
+  line-height: 30px;
+}
+
+p a {
+  color: #230584;
+  text-decoration: underline;
+}
+
+/* Transition */
+a, .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Desktop Nav */
+nav, .nav-links{
+  display: flex;
+}
+nav {
+  position: sticky;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: #ededed;
+}
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+a {
+  padding: 0; /* 去掉链接的padding */
+  color: rgb(42, 42, 42);
+  text-decoration: none;
+  text-decoration-color: #fff;
+}
+
+a:hover {
+  color: grey;
+  font-weight: 700;
+  text-decoration:solid;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181,181,181);
+}
+
+a:active {
+  color: rgb(30, 30, 30);
+  font-weight: 700;
+  text-decoration:solid;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(37, 37, 37);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.logo:hover {
+  color: grey;
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(40, 40, 40);
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+
+/* about */
+h1 {
+  color: rgb(18,17,17);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height:50px;
+}
+h2 {
+  color: #94a3b8;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 83vh;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+.bio {
+  margin-left: 180px;
+  margin-right: 60px;
+}
+.photo img {
+  width: 400px;
+  height: 400px;
+  margin-left: 60px;
+  margin-right: 180px;
+}
+/* resume */
+.resumetitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.name {
+  color: rgb(18,17,17);
+  font-size: 28px;
+  font-weight: 700;
+  line-height:50px;
+}
+.contact-icon {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+.contact-icon a {
+  margin-right: 10px; /* 在链接之间添加一些右边距，可以根据需要进行调整 */
+}
+/* 为email图标添加一些样式以垂直居中 */
+.contact-icon img[alt="email"] {
+  vertical-align: middle;
+}
+.resume-content {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  margin-left: 175px;
+  margin-right: 150px;
+  line-height: 35px;
+}
+h3 {
+  color: rgb(18,17,17);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1px;
+  margin-top: 30px;
+  margin-left: -25px;
+}
+h4 {
+  display: inline-block;
+  font-size: 14px;
+}
+table {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: -25px;
+  margin-right: 150px;
+  border-collapse: collapse;
+  width: 100%;
+  color: rgb(18,17,17);
+  font-size: 14px;
+}
+.date {
+  float: right;
+  margin-right: 26px;
+  color: rgb(18,17,17);
+}
+.tabledate {
+  text-align: right;
+}
+
+/* project */
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.slidebutton {
+  cursor: pointer;
+}
+
+.projectdetail,
+.projectimage {
+  width: 50%;
+}
+
+.projectimage img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* contact */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 83vh;
+  margin-bottom: 60px;
+ margin-left: 90px;
+}
+.contactme {
+  margin-left: 150px;
+  margin-bottom: 80px;
+}
+/* 标题样式 */
+#contactmetitle {
+  font-size: 26px; 
+  font-weight: 700;
+  color: rgb(18,17,17);
+  margin-bottom: 50px;
+}
+
+/* 内容样式 */
+#contactmesentence {
+  font-size: 16px; 
+  color: rgb(18,17,17);
+  line-height: 40px; 
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: 175px;
+  margin-right: 150px;
+  line-height: 35px;
+  font-size: 14px;
+}
+
+/* 更改文本框边框颜色 */
+input[type="text"] {
+  border: 1px solid gray; 
+  border-radius: 4px;
+  margin: 1px 0;
+  height: 30px;
+  width: 236px;
+}
+
+/* 更改提交按钮样式 */
+input[type="submit"] {
+  background-color: rgb(219, 218, 218); /* 替换为你想要的按钮背景颜色 */
+  color: rgb(79, 78, 78);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+
+/* footer */
+footer {
+  height: 12vh;
+  bottom: 0;
+  width: 100%;
+  background: #ededed; /* 根据需要更改背景颜色 */
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%; /* 根据需要调整宽度 */
+  max-width: 1200px; /* 根据需要调整最大宽度 */
+  margin: 0 auto; /* 使页脚容器在页面上居中 */
+  padding: 15px; /* 根据需要调整内边距 */
+}
+
+.footername {
+  margin-left: 10px;
+}
+
+.footerlogo {
+  display: flex;
+  align-items:center;
+}
+
+.footerlogo img {
+  margin-right: 10px;
+}
+
+
+
+/* @media */
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex; /* 将汉堡菜单显示出来 */
+  }
+}

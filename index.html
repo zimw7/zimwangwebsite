@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">ZW.</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav> 
+
+    <nav id="hamburger-nav">
+      <div class="logo">ZW.</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="about">
+
+      <div class="bio">
+        <h1>Hi there，<br>
+          I’m Zimeng👩🏻‍💻</h1>
+
+        <h2>Full-stack Developer</h2>
+        <p>
+          I'm currently studying computer programming with a focus on both front-end and back-end development at <a href="https://www.algonquincollege.com/">Algonquin College</a>. <br><br>
+          With a love for coding and a thirst for knowledge, I'm dedicated to mastering the art of software development.
+        </p>
+      </div>
+
+      <div class="photo">
+        <img class="zimengwang-photo-icon" alt="Zimeng Wang" src="images/Zimeng Wang.png"/>
+      </div>
+
+    </div>
+   
+
+
+
+  <footer>
+    <div class="footer-container">
+        <p class="footername">&#169; 2023 Zimeng Wang</p>
+        <div class="footerlogo">
+          <a href="https://www.linkedin.com/in/zimeng-wang-237988160/">
+            <img class="linkedin-icon" alt="linkedin" src="icons/linkedin.svg" />
+          </a>
+          <a href="https://github.com/zimw7?tab=repositories">
+            <img class="github-icon" alt="Github" src="icons/github.svg" />
+          </a>
+        </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+
+  </body>
+</html>
