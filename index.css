@@ -434,11 +434,14 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   #hamburger-nav {
     height: 12vh;
     margin-right: -50px;
   }
+  
+    
+
     /* ------- INDEX------- */
   .logo {
     margin-left: -60px;
