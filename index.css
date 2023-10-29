@@ -86,10 +86,12 @@ a:active {
 /*  ---------- HAMBURGER MENU ---------- */
 #hamburger-nav {
   display: none;
+  z-index: 2;
 }
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 2;
 }
 .hamburger-icon {
   display: flex;
@@ -543,14 +545,13 @@ footer {
   margin-left: -150px;
 }
 
-
 /* ------- PROJECTS ------- */
 .carousel {
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 105vh;
+  height: 110vh;
 }
 .carousel-item {
   display: none;
@@ -570,6 +571,7 @@ footer {
   flex: 1.55;
   max-width: 50%; 
   margin: 0 auto;
+  z-index: 1;
 }
 .projectdetail {
   flex: 2;
@@ -585,7 +587,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 75vh;
     margin: 10px;
     padding: 10px;
     margin-bottom: 25px;
