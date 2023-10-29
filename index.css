@@ -434,7 +434,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   #hamburger-nav {
     height: 12vh;
     margin-right: -50px;
@@ -578,8 +578,12 @@ footer {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.slidebutton.prev {
+  left: 1vh;
+}
+
 .slidebutton.next {
-  right: 20px;
+  right: 1vh;
 }
 
 /* ------- CONTACT ------- */
