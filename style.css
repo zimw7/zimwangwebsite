@@ -234,28 +234,28 @@ h3 {
   margin-left: -25px;
   text-decoration: underline;
 }
-h4 {
-  display: inline-block;
-  font-size: 14px;
-}
-table {
-  margin-top: 0px;
+
+.education {
   margin-bottom: 20px;
-  margin-left: -25px;
-  margin-right: 150px;
-  border-collapse: collapse;
-  width: 100%;
-  color: rgb(18,17,17);
+  color: rgb(18, 17, 17);
   font-size: 14px;
 }
-.date {
-  float: right;
-  margin-right: 26px;
-  color: rgb(18,17,17);
+h3 {
+  font-size: 16px;
 }
-.tabledate {
-  text-align: right;
+.education-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
+.education-details {
+  flex: 1;
+}
+h4 {
+  font-size: 14px;
+}
+
 .work-experience li {
   margin-left: 20px;
 }
@@ -502,33 +502,18 @@ footer {
   width: 335px;
   font-size: 12px;
   margin-left: -150px;
+}  .education-entry {
+  flex-direction: column;
 }
-.education table {
-  width: 100%; 
-  border-collapse: collapse; 
-  margin-bottom: 16px; 
-}
-
-.education tr {
-  display: block; 
-  margin-bottom: 10px;
+.education-entry h4 {
+  font-size: 12px; 
   width: 300px;
-  margin-left: -140px;
+  margin-left: -160px;
 }
-
-.education td {
-  display: block; 
-  text-align: left;
-  width: 200px;
-}
-
-.education td:before {
-  content: attr(data-label); 
-  display: block; 
-  margin-bottom: 5px; 
-}
-.education td.tabledate {
-  text-align: left;
+.education .date {
+  font-size: 12px;
+  width: 300px;
+  margin-left: -160px;
 }
 .work-experience h4 {
   width: 310px;
