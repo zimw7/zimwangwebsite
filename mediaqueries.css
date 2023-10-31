@@ -1,0 +1,189 @@
+/* 
+Name: Zimeng Wang
+File Name: mediaqueries.css
+Create Date: Oct 29, 2023 
+Purpose: This CSS file contains media queries that define responsive styles for various screen sizes. 
+It adjusts the layout and appearance of the website elements to provide an optimal user experience on 
+different devices, such as desktops and mobile devices. 
+*/
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Media Query for screens with a maximum width of 1200px */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex; 
+  }
+}
+
+/* Media Query for screens with a maximum width of 780px */
+@media screen and (max-width: 780px) {
+  #hamburger-nav {
+    height: 12vh;
+    margin-right: -50px;
+  }
+  
+/* ------- INDEX------- */
+/* Styles for the INDEX section */
+  .logo {
+    margin-left: -60px;
+  }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 15px;
+  }
+  .bio {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+  .bio h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .photo img {
+    width: 300px;
+    height: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+  }
+
+/* ------- RESUME ------- */
+/* Styles for the RESUME section */
+.resume {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+.resumetitle {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.name {
+  margin-bottom: 10px;
+  font-size: 22px;
+  width: 350px;
+  margin: 0 auto;
+}
+.resume-content h3 {
+  font-size: 16px;
+  margin-left: -165px;
+}
+.summary p {
+  width: 350px;
+  font-size: 12px;
+  margin-left: -165px;
+}
+.resume-content ul {
+  width: 335px;
+  font-size: 12px;
+  margin-left: -150px;
+}  .education-entry {
+  flex-direction: column;
+}
+.education-entry h4 {
+  font-size: 12px; 
+  width: 300px;
+  margin-left: -160px;
+}
+.education .date {
+  font-size: 12px;
+  width: 300px;
+  margin-left: -160px;
+}
+.work-experience h4 {
+  width: 310px;
+  font-size: 12px;
+  margin-left: -165px;
+} 
+.date {
+  font-size: 12px;
+  width: 315px;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: -165px;
+}
+.work-experience ul {
+  width: 310px;
+  font-size: 12px;
+  margin-left: -150px;
+}
+
+/* ------- PROJECTS ------- */
+/* Styles for the PROJECTS section */
+
+.carousel {
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 105vh;
+}
+.carousel-item {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+}
+.carousel-item.active {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+.project-image {
+  flex: 1.55;
+  max-width: 50%; 
+  margin: 0 auto;
+  z-index: 1;
+}
+.projectdetail {
+  flex: 2;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.slidebutton.prev {
+  left: 1vh;
+}
+
+.slidebutton.next {
+  right: 1vh;
+}
+
+/* ------- CONTACT ------- */
+/* Styles for the CONTACT section */
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .contactme {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  .form {
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+ 
+}
