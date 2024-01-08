@@ -1,545 +1,332 @@
-/* 
-Name: Zimeng Wang
-File Name: style.css
-Create Date: Oct 29, 2023 
-Purpose: This CSS file contains the styles for Zimeng Wang's personal website. 
-It defines the appearance and layout of various elements on the website, including fonts, 
-colors, and navigation menus.
-*/
+/* 在 CSS 文件顶部引入 Poppins 字体的不同字重 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
 
-/* ---------- GENERAL STYLES ---------- */
-
-/* Resetting default margin, padding, and box model for all elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Setting a smooth scroll behavior for the entire page */
-html{
-  scroll-behavior: smooth;
-}
-
-/* Setting a common font family for the whole page */
+/* 设置全局字体 */
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--gray-50);
 }
 
-/* Styling for paragraphs and unordered lists */
-p {
-  margin: 0;
-  color: #606060;
-  line-height: 26px;
-  font-size: 14px;
-}
-ul {
-  font-size: 14px;
-  color: #606060;
-  line-height: 30px;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
-/* Styling links within paragraphs */
-p a {
-  color: #230584;
-  text-decoration: underline;
+/* 颜色 */
+/* https://tailwindcss.com/docs/customizing-colors  （Neutral） */
+:root {
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f4;
+  --gray-200: #e5e5e5;
+  --gray-300: #e5e5e5;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  --gray-950: #0a0a0a;
 }
 
-/* ---------- DESKTOP NAVIGATION STYLES ---------- */
-
-/* Styling for the desktop navigation bar */
-nav, .nav-links{
-  display: flex;
-}
-nav {
-  position: sticky;
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-  background-color: #ededed;
+.container {
+  width: 100%; /* 或你希望的宽度 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Styling for the navigation links */
-.nav-links {
-  gap: 2rem;
-  list-style: none;
+/* nav */
+@media (max-width: 991px) {
+  /* Bootstrap 4 默认折叠导航栏的宽度，根据您的Bootstrap版本调整 */
+  .navbar-custom .navbar-collapse {
+    text-align: right;
+  }
+
+  .navbar-custom .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-top: 1.5em;
+    padding-bottom: 0;
+  }
+
+  .navbar-custom {
+    min-height: 90px; /* 维持您之前设置的高度 */
+  }
+}
+
+.navbar-custom {
+  background: rgba(244, 244, 244, 0.3);
+  backdrop-filter: blur(12px);
+  min-height: 90px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 13pt;
+  justify-content: center;
+
+  /* 如果您需要增加单词间距 */
+}
+
+/* 增加每个导航链接的左右边距 */
+.navbar-custom .nav-link {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: var(--gray-900);
+  opacity: 0.6;
+  transition: 0.3s ease; /* 修正过渡效果 */
+}
+
+/* 鼠标悬停时更改字体颜色和加粗 */
+.navbar-custom .nav-link:hover {
   font-weight: 400;
-  font-size: 1rem;
-}
-a {
-  transition: all 0.3s ease-in-out;
-  padding: 0; 
-  color: rgb(42, 42, 42);
-  text-decoration: none;
-  text-decoration-color: #fff;
-}
-
-/* Hover and active link styles */
-a:hover {
-  color: grey;
-  font-weight: 700;
-  text-decoration: solid;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
-}
-a:active {
-  color: rgb(30, 30, 30);
-  font-weight: 700;
-  text-decoration: solid;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(37, 37, 37);
-}
-
-/* Styling for the logo in the navigation bar */
-.logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: -2px;
-}
-
-/* Hover and active styles for the logo */
-.logo:hover {
-  color: grey;
-  cursor: pointer;
-}
-.logo:active {
-  color: rgb(30, 30, 30);
-  cursor: pointer;
-}
-
-/* ---------- HAMBURGER MENU STYLES ---------- */
-
-/* Styling for the hamburger menu icon and navigation */
-#hamburger-nav {
-  display: none;
-  z-index: 2;
-}
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-.hamburger-icon span {
-  width: 100%;
-  height: 4px;
-  background-color: rgb(40, 40, 40);
-  transition: all 0.3s ease-in-out;
-}
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: rgb(204, 203, 203);
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3s ease-inout;
-}
-.menu-links li {
-  list-style: none;
-}
-
-/* Styling for the open menu */
-.menu-links.open {
-  max-height: 300px;
-}
-
-/* Styling for the hamburger icon when the menu is open */
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-/* Resetting the hamburger icon styles when the menu is closed */
-.hamburger-icon span:first-child {
-  transform: none;
   opacity: 1;
 }
 
-/* ---------- INDEX STYLES ---------- */
-
-/* Styling for the main heading on the index page */
-h1 {
-  color: rgb(18, 17, 17);
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  line-height: 50px;
+/* bio */
+.bio-section {
+  padding: 12em 0 4em 0;
 }
 
-/* Styling for secondary headings on the index page */
-h2 {
-  color: #94a3b8;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 40px;
+.bio-title {
+  font-size: 3em;
+  color: var(--gray-900);
+  font-weight: bold;
+  line-height: 1;
 }
 
-/* Styling for the "about" section */
-.about {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 83vh;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+.bio-subtitle {
+  font-size: 16pt;
+  color: var(--gray-400);
+  margin-bottom: 3em;
+  font-weight: 500;
 }
 
-/* Styling for the biography section */
-.bio {
-  margin-left: 180px;
-  margin-right: 60px;
+.bio-text {
+  font-size: 12pt;
+  max-width: 550px;
+  color: var(--gray-800);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 3em;
 }
 
-/* Styling for the profile photo */
-.photo img {
-  width: 400px;
-  height: 400px;
-  margin-left: 60px;
-  margin-right: 180px;
+.college-link {
+  text-decoration: underline; /* 移除下划线 */
+  color: var(--gray-500); /* 设置默认颜色 */
+  font-weight: 300;
 }
 
-/* ---------- RESUME STYLES ---------- */
+.college-link:hover {
+  color: var(--gray-800); /* 悬停时的颜色 */
+  text-decoration: none; /* 添加下划线 */
+  font-weight: 500;
+}
 
-/* Styling for the entire resume section */
-.resume {
-  width: auto;
+.bio-image {
+  max-width: 100%;
   height: auto;
-  margin-bottom: 2rem;
-  margin-left: 120px;
-  margin-right: 120px;
+  border-radius: 20px;
 }
 
-/* Styling for the resume title and contact icons */
-.resumetitle {
+/*  My Skills */
+.skills-section {
+  padding: 4em 0;
+}
+.skills-title-custom {
+  align-self: flex-start; /* 使其在flex容器内靠左对齐 */
+  text-align: left; /* 文本居左对齐 */
+  font-size: 16pt;
+  color: var(--gray-700);
+  margin-right: 3em;
+  font-weight: 500;
+  margin: 2em 0;
+}
+
+/* Optional: Adjust the size of the icons */
+.img-fluid {
+  max-width: 80%; /* Adjust the max-width as needed */
+  height: auto; /* This keeps the aspect ratio of the images */
+}
+
+/* Align the text in the 'My Skills' column to the middle vertically */
+.col-md-2 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-top: 40px;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 
-/* Styling for the name in the resume */
-.name {
-  color: rgb(18, 17, 17);
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 50px;
-}
-
-/* Styling for the contact icons in the resume */
-.contact-icon {
-  display: flex;
-  align-items: center; 
-}
-
-.contact-icon a {
-  margin-right: 10px;
-}
-
-/* Styling for the resume content */
-.resume-content {
-  margin-top: 40px;
-  margin-bottom: 70px;
-  margin-left: 175px;
-  margin-right: 150px;
-  line-height: 35px;
-}
-
-/* Styling for subheadings in the resume */
-h3 {
-  color: rgb(18, 17, 17);
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 1px;
-  margin-top: 30px;
-  margin-left: -25px;
-  text-decoration: underline;
-}
-
-/* Styling for education entries */
-.education {
-  margin-bottom: 20px;
-  color: rgb(18, 17, 17);
-  font-size: 14px;
-}
-
-/* Styling for specific education entry headings */
-h3 {
-  font-size: 16px;
-}
-
-/* Styling for education entry containers */
-.education-entry {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-/* Styling for education details */
-.education-details {
-  flex: 1;
-}
-
-/* Styling for subheadings within education entries */
-h4 {
-  font-size: 14px;
-}
-
-/* Styling for work experience list items */
-.work-experience li {
-  margin-left: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* ---------- PROJECTS STYLES ---------- */
-/* Styling for the projects section */
-
-/* Styling for the project title */
-.project-title a {
-  color: rgb(42, 42, 42);
-}
-.project-title a:hover {
-  text-decoration: none; 
-  font-style: italic;
-  color: #1a026b;
-}
-.project-title a:active {
-  color: #1a026b;
-}
-
-/* Styling for the image carousel */
-.carousel {
-  position: relative;
-  display: flex;
+/* Style for icon names */
+.icon-name {
+  font-size: 11pt; /* Adjust the font size as needed */
+  margin-top: 0.5rem; /* Space between icon and text */
+  color: var(--gray-600);
+  text-align: center;
+  white-space: nowrap;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  height: 92vh;
-  width: 80vw;
-  margin: 0 auto;
-} 
-
-/* Styling for carousel items */
-.carousel-item {
-  display: none;
-  justify-content: space between;
-  width: 100%;
-  position: absolute;
-} 
-
-/* Styling for the active carousel item */
-.carousel-item.active {
-  display: flex;
+  text-overflow: ellipsis;
 }
 
-/* Styling for the slide buttons */
-.slidebutton {
-  position: absolute;
-  background: none;
-  top: 50%;
-  z-index: 2;
-  cursor: pointer;
-  font-size: 2rem;
-  transform: translateY(-50%);
+/* Add some spacing between the rows of icons */
+.row + .row {
+  margin-top: 15px; /* Adjust the space as needed */
+}
+
+/* Ensure the icon name text is centered below each icon, and no-wrap to keep the alignment tidy */
+
+/* projects */
+
+.projects-section {
+  padding: 8em 0;
+}
+.projects-title {
+  margin: 1em 0;
+  font-size: 2.4em;
+  color: var(--gray-800);
+  font-weight: bold;
+  line-height: 1; /* 或者您需要的其他值 */
+}
+
+/* Custom card styles */
+.custom-card {
+  margin: 1em; /* Add margin to create more space around the card */
+  transition: transform 0.2s, box-shadow 0.5s; /* Smooth transition for hover effects */
+  box-shadow: none; /* No shadow by default */
+  border: none; /* Remove border */
+}
+
+.custom-card-body {
+  background-color: var(
+    --gray-50
+  ); /* Change the background color of the text section */
+  padding-top: 1.5em; /* Add some padding around the text */
+  border-bottom-left-radius: 5px; /* Round top left corner */
+  border-bottom-right-radius: 5px;
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Slightly increase the scale of the card on hover */
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.custom-card-img {
+  /* Assume you have a .custom-card-img class for the images in your card */
+  display: block;
+  width: 100%; /* Make the image fit the width of the card */
+  border-top-left-radius: 5px; /* Round top left corner */
+  border-top-right-radius: 5px; /* Round top right corner */
+}
+
+/* Card title styles */
+
+.card-title a {
+  font-size: 11pt;
+  color: var(--gray-500); /* Change the color to darker gray */
+  font-weight: 500;
+  text-decoration: underline; /* Add underline to the link */
+}
+
+.card-title a:hover {
+  color: var(--gray-900); /* Change the color to lighter gray on hover */
+  font-weight: 500;
+  text-decoration: none; /* Remove the underline on hover */
+}
+
+.card-description {
+  font-size: 11pt; /* Example font size for the description */
+  color: var(--gray-400); /* Dim the text color for the description */
+  margin-top: 0.8em; /* Add some space above the description */
+  margin-bottom: 1.5em; /* Add some space below the description */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.col-md-6 {
+  padding: 15px; /* Add more padding around the columns */
+}
+
+/* 确保footer背景色能够覆盖整个屏幕宽度 */
+/* Footer基本样式 */
+footer#contact {
+  background-color: var(--gray-100); /* 您选择的颜色 */
   margin: 0;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-/* Hover and active styles for slide buttons */
-.slidebutton:hover {
-  color: grey;
-}
-.slidebutton:active {
-  color: rgb(30, 30, 30);
-}
-
-/* Styling for previous and next slide buttons */
-.slidebutton.prev {
-  flex: 0.25;
-  left: 1.5rem;
-}
-.slidebutton.next {
-  flex: 0.25;
-  right: -1.5rem;
-}
-
-/* Styling for project details */
-.projectdetail {
-  flex: 1.5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 110px;
-  margin-right: 100px;
-}
-
-/* Styling for project titles */
-.project-title {
-  font-size: 20px; 
-  font-weight: 700;
-  color: rgb(18, 17, 17);
-  margin-bottom: 25px;
-}
-
-/* Styling for project tool names */
-.project-toolname {
-  font-size: 16px; 
-  font-weight: 400;
-  color: #94a3b8;
-  margin-bottom: 10px;
-}
-
-/* Styling for project descriptions */
-.project-description {
-  font-size: 14px; 
-  font-weight: 400;
-  color: rgb(18, 17, 17);
-  margin-bottom: 25px;
-}
-
-/* Styling for project dates */
-.project-date {
-  font-size: 14px; 
-  font-weight: 400;
-  color: #94a3b8;
-  margin-bottom: 25px;
-}
-
-/* Styling for project images */
-.project-image {
-  flex: 1.25;
-  max-width: 30%; 
-  height: auto; 
-  transform-origin: center center;
-  transition: transform 0.3s ease; 
-  margin-right: 60px;
-  object-fit: contain;
-}
-
-/* ---------- CONTACT STYLES ---------- */
-
-/* Styling for the contact section */
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 90px;
-  padding: 50px;
-  height: 73vh;
-}
-
-/* Styling for the contact me section */
-.contactme {
-  margin-left: 150px;
-  margin-bottom: 80px;
-}
-
-/* Styling for the contact title and description */
-#contactmetitle {
-  font-size: 26px; 
-  font-weight: 700;
-  color: rgb(18, 17, 17);
-  margin-bottom: 50px;
-}
-#contactmesentence {
-  font-size: 16px; 
-  color: rgb(18, 17, 17);
-  line-height: 40px; 
-}
-
-/* Styling for the contact form */
-.form {
-  display: flex;
-  flex-direction: column;
-  margin-left: 175px;
-  margin-right: 150px;
-  line-height: 36px;
-  font-size: 14px;
-}
-
-/* Styling for text input fields */
-input[type="text"] {
-  border: 1px solid gray; 
-  border-radius: 4px;
-  margin: 1px 0;
-  height: 30px;
-  width: 236px;
-}
-
-/* Styling for the submit button */
-input[type="submit"] {
-  background-color: rgb(219, 218, 218); 
-  color: rgb(79, 78, 78);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-/* ---------- FOOTER STYLES ---------- */
-
-/* Styling for the footer section */
-footer {
-  height: 10vh;
-  bottom: 0;
+  padding: 3.5em 0 1.5em 0; /* 保持顶部和底部的padding */
   width: 100%;
-  background: #ededed; 
 }
 
-/* Styling for the footer container */
-.footer-container {
+/* Container样式，用于居中和最大宽度 */
+footer#contact .contact-container {
+  max-width: 1200px; /* 与其他部分保持一致 */
+  margin: 0 auto; /* 上下间距0，左右自动（居中） */
+  padding: 0 15px; /* 与网站其他部分一致的内边距 */
+  box-sizing: border-box; /* 包含padding和border在内的宽度计算 */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; 
-  height: 100%;
-  max-width: 1500px; 
-  margin: 0 auto; 
-  padding: 15px; 
+  flex-wrap: wrap;
 }
 
-/* Styling for the footer name */
-.footername {
-  margin-left: 1px;
+.contact-title {
+  font-size: 2.4em;
+  color: var(--gray-800); /* This sets the color for the .contact-title class */
+  font-weight: bold;
+  line-height: 1; /* Adjust line height as needed */
+  margin-bottom: 1em;
 }
 
-/* Styling for the footer logo */
-.footerlogo {
+.contact-title a {
+  color: var(--gray-800); /* This sets the link color to black */
+  text-decoration: none; /* This removes the underline from the link */
+}
+
+.contact-title a:hover {
+  text-decoration: underline; /* This adds underline on hover if desired */
+}
+
+.contact-info {
+  color: var(--gray-600);
+  font-size: 14pt;
+  font-weight: 600;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-icons {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+  justify-content: center;
 }
 
-/* Styling for the footer logo image */
-.footerlogo img {
-  margin-right: 10px;
+.social-icon {
+  margin-left: 1em;
+  margin-right: 1em;
+  opacity: 0.5; /* 调整透明度 */ /* Less spacing between icons on smaller screens */
+}
+
+/* 改变背景颜色 */
+.social-icon:hover {
+  /* 悬停时的背景颜色 */
+  transform: scale(1.1);
+  transition: 0.2s ease;
+  opacity: 1; /* 悬停时的背景颜色 */
+}
+
+.social-icon img {
+  width: 30px;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer#contact .contact-container {
+    padding: 2em 1em; /* 小屏幕时调整内边距，左右保留一些空间 */
+  }
+
+  /* 你可能还需要添加一些响应式调整，比如堆叠元素而不是并排排列 */
+}
+
+.contact-info {
+  align-items: center;
 }
