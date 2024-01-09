@@ -1,7 +1,7 @@
-/* 在 CSS 文件顶部引入 Poppins 字体的不同字重 */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
 
-/* 设置全局字体 */
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--gray-50);
@@ -14,7 +14,7 @@ select {
   font-family: inherit;
 }
 
-/* 颜色 */
+/* colour */
 /* https://tailwindcss.com/docs/customizing-colors  （Neutral） */
 :root {
   --gray-50: #fafafa;
@@ -31,14 +31,13 @@ select {
 }
 
 .container {
-  width: 100%; /* 或你希望的宽度 */
+  width: 100%; 
   margin-left: auto;
   margin-right: auto;
 }
 
 /* nav */
 @media (max-width: 991px) {
-  /* Bootstrap 4 默认折叠导航栏的宽度，根据您的Bootstrap版本调整 */
   .navbar-custom .navbar-collapse {
     text-align: right;
   }
@@ -50,7 +49,7 @@ select {
   }
 
   .navbar-custom {
-    min-height: 90px; /* 维持您之前设置的高度 */
+    min-height: 90px; 
   }
 }
 
@@ -63,19 +62,19 @@ select {
   font-size: 13pt;
   justify-content: center;
 
-  /* 如果您需要增加单词间距 */
+
 }
 
-/* 增加每个导航链接的左右边距 */
+
 .navbar-custom .nav-link {
   margin-left: 15px;
   margin-right: 15px;
   color: var(--gray-900);
   opacity: 0.6;
-  transition: 0.3s ease; /* 修正过渡效果 */
+  transition: 0.3s ease; 
 }
 
-/* 鼠标悬停时更改字体颜色和加粗 */
+
 .navbar-custom .nav-link:hover {
   font-weight: 400;
   opacity: 1;
@@ -110,14 +109,14 @@ select {
 }
 
 .college-link {
-  text-decoration: underline; /* 移除下划线 */
-  color: var(--gray-500); /* 设置默认颜色 */
+  text-decoration: underline; 
+  color: var(--gray-500); 
   font-weight: 300;
 }
 
 .college-link:hover {
-  color: var(--gray-800); /* 悬停时的颜色 */
-  text-decoration: none; /* 添加下划线 */
+  color: var(--gray-800); 
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -132,8 +131,8 @@ select {
   padding: 4em 0;
 }
 .skills-title-custom {
-  align-self: flex-start; /* 使其在flex容器内靠左对齐 */
-  text-align: left; /* 文本居左对齐 */
+  align-self: flex-start; 
+  text-align: left; 
   font-size: 16pt;
   color: var(--gray-700);
   margin-right: 3em;
@@ -141,23 +140,23 @@ select {
   margin: 2em 0;
 }
 
-/* Optional: Adjust the size of the icons */
+
 .img-fluid {
-  max-width: 80%; /* Adjust the max-width as needed */
-  height: auto; /* This keeps the aspect ratio of the images */
+  max-width: 80%; 
+  height: auto; 
 }
 
-/* Align the text in the 'My Skills' column to the middle vertically */
+
 .col-md-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Style for icon names */
+
 .icon-name {
-  font-size: 11pt; /* Adjust the font size as needed */
-  margin-top: 0.5rem; /* Space between icon and text */
+  font-size: 11pt; 
+  margin-top: 0.5rem; 
   color: var(--gray-600);
   text-align: center;
   white-space: nowrap;
@@ -165,12 +164,10 @@ select {
   text-overflow: ellipsis;
 }
 
-/* Add some spacing between the rows of icons */
-.row + .row {
-  margin-top: 15px; /* Adjust the space as needed */
-}
 
-/* Ensure the icon name text is centered below each icon, and no-wrap to keep the alignment tidy */
+.row + .row {
+  margin-top: 15px; 
+
 
 /* projects */
 
@@ -182,59 +179,58 @@ select {
   font-size: 2.4em;
   color: var(--gray-800);
   font-weight: bold;
-  line-height: 1; /* 或者您需要的其他值 */
+  line-height: 1; 
 }
 
 /* Custom card styles */
 .custom-card {
-  margin: 1em; /* Add margin to create more space around the card */
-  transition: transform 0.2s, box-shadow 0.5s; /* Smooth transition for hover effects */
-  box-shadow: none; /* No shadow by default */
-  border: none; /* Remove border */
+  margin: 1em; 
+  transition: transform 0.2s, box-shadow 0.5s; 
+  box-shadow: none; 
+  border: none; 
 }
 
 .custom-card-body {
   background-color: var(
     --gray-50
-  ); /* Change the background color of the text section */
-  padding-top: 1.5em; /* Add some padding around the text */
-  border-bottom-left-radius: 5px; /* Round top left corner */
+  ); 
+  padding-top: 1.5em; 
+  border-bottom-left-radius: 5px; 
   border-bottom-right-radius: 5px;
 }
 
 .custom-card:hover {
-  transform: scale(1.05); /* Slightly increase the scale of the card on hover */
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2); 
 
 .custom-card-img {
-  /* Assume you have a .custom-card-img class for the images in your card */
+ 
   display: block;
-  width: 100%; /* Make the image fit the width of the card */
-  border-top-left-radius: 5px; /* Round top left corner */
-  border-top-right-radius: 5px; /* Round top right corner */
+  width: 100%;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
 }
 
 /* Card title styles */
 
 .card-title a {
   font-size: 11pt;
-  color: var(--gray-500); /* Change the color to darker gray */
+  color: var(--gray-500); 
   font-weight: 500;
-  text-decoration: underline; /* Add underline to the link */
+  text-decoration: underline; 
 }
 
 .card-title a:hover {
-  color: var(--gray-900); /* Change the color to lighter gray on hover */
+  color: var(--gray-900); 
   font-weight: 500;
-  text-decoration: none; /* Remove the underline on hover */
+  text-decoration: none; 
 }
 
 .card-description {
-  font-size: 11pt; /* Example font size for the description */
-  color: var(--gray-400); /* Dim the text color for the description */
-  margin-top: 0.8em; /* Add some space above the description */
-  margin-bottom: 1.5em; /* Add some space below the description */
+  font-size: 11pt; 
+  color: var(--gray-400); 
+  margin-top: 0.8em; 
+  margin-bottom: 1.5em; 
 }
 
 .text-center {
@@ -242,24 +238,24 @@ select {
 }
 
 .col-md-6 {
-  padding: 15px; /* Add more padding around the columns */
+  padding: 15px; 
 }
 
-/* 确保footer背景色能够覆盖整个屏幕宽度 */
-/* Footer基本样式 */
+
+/* Footer*/
 footer#contact {
-  background-color: var(--gray-100); /* 您选择的颜色 */
+  background-color: var(--gray-100); 
   margin: 0;
-  padding: 3.5em 0 1.5em 0; /* 保持顶部和底部的padding */
+  padding: 3.5em 0 1.5em 0; 
   width: 100%;
 }
 
-/* Container样式，用于居中和最大宽度 */
+
 footer#contact .contact-container {
-  max-width: 1200px; /* 与其他部分保持一致 */
-  margin: 0 auto; /* 上下间距0，左右自动（居中） */
-  padding: 0 15px; /* 与网站其他部分一致的内边距 */
-  box-sizing: border-box; /* 包含padding和border在内的宽度计算 */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 15px; 
+  box-sizing: border-box; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,19 +264,19 @@ footer#contact .contact-container {
 
 .contact-title {
   font-size: 2.4em;
-  color: var(--gray-800); /* This sets the color for the .contact-title class */
+  color: var(--gray-800);
   font-weight: bold;
-  line-height: 1; /* Adjust line height as needed */
+  line-height: 1; 
   margin-bottom: 1em;
 }
 
 .contact-title a {
-  color: var(--gray-800); /* This sets the link color to black */
-  text-decoration: none; /* This removes the underline from the link */
+  color: var(--gray-800); 
+  text-decoration: none; 
 }
 
 .contact-title a:hover {
-  text-decoration: underline; /* This adds underline on hover if desired */
+  text-decoration: underline; 
 }
 
 .contact-info {
@@ -302,15 +298,15 @@ footer#contact .contact-container {
 .social-icon {
   margin-left: 1em;
   margin-right: 1em;
-  opacity: 0.5; /* 调整透明度 */ /* Less spacing between icons on smaller screens */
+  opacity: 0.5; 
 }
 
-/* 改变背景颜色 */
+
 .social-icon:hover {
-  /* 悬停时的背景颜色 */
+  
   transform: scale(1.1);
   transition: 0.2s ease;
-  opacity: 1; /* 悬停时的背景颜色 */
+  opacity: 1; 
 }
 
 .social-icon img {
@@ -318,13 +314,13 @@ footer#contact .contact-container {
   height: auto;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   footer#contact .contact-container {
-    padding: 2em 1em; /* 小屏幕时调整内边距，左右保留一些空间 */
+    padding: 2em 1em; 
   }
 
-  /* 你可能还需要添加一些响应式调整，比如堆叠元素而不是并排排列 */
+ 
 }
 
 .contact-info {
