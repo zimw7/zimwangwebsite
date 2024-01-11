@@ -1,7 +1,7 @@
-
+/* 在 CSS 文件顶部引入 Poppins 字体的不同字重 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
 
-
+/* font */
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--gray-50);
@@ -20,7 +20,7 @@ select {
   --gray-50: #fafafa;
   --gray-100: #f4f4f4;
   --gray-200: #e5e5e5;
-  --gray-300: #e5e5e5;
+  --gray-300: #d4d4d4;
   --gray-400: #a3a3a3;
   --gray-500: #737373;
   --gray-600: #525252;
@@ -31,7 +31,7 @@ select {
 }
 
 .container {
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,7 +49,7 @@ select {
   }
 
   .navbar-custom {
-    min-height: 90px; 
+    min-height: 90px;
   }
 }
 
@@ -61,19 +61,15 @@ select {
   font-weight: 300;
   font-size: 13pt;
   justify-content: center;
-
-
 }
-
 
 .navbar-custom .nav-link {
   margin-left: 15px;
   margin-right: 15px;
   color: var(--gray-900);
   opacity: 0.6;
-  transition: 0.3s ease; 
+  transition: 0.3s ease;
 }
-
 
 .navbar-custom .nav-link:hover {
   font-weight: 400;
@@ -109,15 +105,14 @@ select {
 }
 
 .college-link {
-  text-decoration: underline; 
-  color: var(--gray-500); 
+  text-decoration: underline;
+  color: var(--gray-500);
   font-weight: 300;
 }
 
 .college-link:hover {
-  color: var(--gray-800); 
+  color: var(--gray-800);
   text-decoration: none;
-  font-weight: 500;
 }
 
 .bio-image {
@@ -131,8 +126,8 @@ select {
   padding: 4em 0;
 }
 .skills-title-custom {
-  align-self: flex-start; 
-  text-align: left; 
+  align-self: flex-start;
+  text-align: left;
   font-size: 16pt;
   color: var(--gray-700);
   margin-right: 3em;
@@ -140,12 +135,10 @@ select {
   margin: 2em 0;
 }
 
-
 .img-fluid {
-  max-width: 80%; 
-  height: auto; 
+  max-width: 80%;
+  height: auto;
 }
-
 
 .col-md-2 {
   display: flex;
@@ -153,10 +146,9 @@ select {
   align-items: center;
 }
 
-
 .icon-name {
-  font-size: 11pt; 
-  margin-top: 0.5rem; 
+  font-size: 11pt;
+  margin-top: 0.5rem;
   color: var(--gray-600);
   text-align: center;
   white-space: nowrap;
@@ -164,10 +156,9 @@ select {
   text-overflow: ellipsis;
 }
 
-
 .row + .row {
-  margin-top: 15px; 
-
+  margin-top: 15px;
+}
 
 /* projects */
 
@@ -179,58 +170,55 @@ select {
   font-size: 2.4em;
   color: var(--gray-800);
   font-weight: bold;
-  line-height: 1; 
+  line-height: 1;
 }
 
 /* Custom card styles */
 .custom-card {
-  margin: 1em; 
-  transition: transform 0.2s, box-shadow 0.5s; 
-  box-shadow: none; 
-  border: none; 
+  margin: 1em;
+  transition: transform 0.2s, box-shadow 0.5s;
+  box-shadow: none;
+  border: none;
 }
 
 .custom-card-body {
-  background-color: var(
-    --gray-50
-  ); 
-  padding-top: 1.5em; 
-  border-bottom-left-radius: 5px; 
+  background-color: var(--gray-50);
+  padding-top: 1.5em;
+  border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .custom-card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
 
 .custom-card-img {
- 
   display: block;
   width: 100%;
-  border-top-left-radius: 5px; 
-  border-top-right-radius: 5px; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* Card title styles */
 
 .card-title a {
   font-size: 11pt;
-  color: var(--gray-500); 
+  color: var(--gray-500);
   font-weight: 500;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .card-title a:hover {
-  color: var(--gray-900); 
-  font-weight: 500;
-  text-decoration: none; 
+  color: var(--gray-900);
+  text-decoration: none;
 }
 
 .card-description {
-  font-size: 11pt; 
-  color: var(--gray-400); 
-  margin-top: 0.8em; 
-  margin-bottom: 1.5em; 
+  font-size: 11pt;
+  color: var(--gray-400);
+  margin-top: 0.8em;
+  margin-bottom: 1.5em;
 }
 
 .text-center {
@@ -238,75 +226,74 @@ select {
 }
 
 .col-md-6 {
-  padding: 15px; 
+  padding: 15px;
 }
 
-
-/* Footer*/
+/* Footer */
 footer#contact {
-  background-color: var(--gray-100); 
-  margin: 0;
-  padding: 3.5em 0 1.5em 0; 
+  background-color: var(--gray-100);
+  padding: 3.5em 0 1.5em 0;
   width: 100%;
 }
 
-
 footer#contact .contact-container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 15px; 
-  box-sizing: border-box; 
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .contact-title {
   font-size: 2.4em;
   color: var(--gray-800);
   font-weight: bold;
-  line-height: 1; 
-  margin-bottom: 1em;
+  line-height: 1;
+  margin-right: auto;
+  text-decoration: none;
 }
 
 .contact-title a {
-  color: var(--gray-800); 
-  text-decoration: none; 
+  color: var(--gray-800);
+  text-decoration: none;
 }
 
 .contact-title a:hover {
-  text-decoration: underline; 
+  color: var(--gray-800);
+  text-decoration: underline;
 }
 
 .contact-info {
-  color: var(--gray-600);
-  font-size: 14pt;
-  font-weight: 600;
-  flex-direction: column;
-  align-items: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  flex-wrap: nowrap;
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 1em;
-  justify-content: center;
 }
 
 .social-icon {
-  margin-left: 1em;
-  margin-right: 1em;
-  opacity: 0.5; 
+  margin: 0 1em;
+  opacity: 0.5;
+  display: flex;
 }
 
-
 .social-icon:hover {
-  
   transform: scale(1.1);
-  transition: 0.2s ease;
-  opacity: 1; 
+  transition: all 0.2s ease;
+  opacity: 1;
 }
 
 .social-icon img {
@@ -314,15 +301,34 @@ footer#contact .contact-container {
   height: auto;
 }
 
-
-@media (max-width: 768px) {
-  footer#contact .contact-container {
-    padding: 2em 1em; 
-  }
-
- 
+/* Responsive adjustments */
+.contact-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.contact-info {
-  align-items: center;
+@media (min-width: 576px) {
+  .contact-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-container {
+    max-width: 1140px;
+  }
 }
